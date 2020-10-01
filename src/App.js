@@ -39,12 +39,12 @@ export default function App() {
 
   return (
     <>
+      <h1> Example using useEffect, and fetching to jsonplaceholder</h1>
       <div>
         <button onClick={() => setResourceType('posts')}> Post </button>
         <button onClick={() => setResourceType('users')}> Users </button>
         <button onClick={() => setResourceType('comments')}> Comments </button>
       </div>
-      <h1> Example using useEffect, and fetching to jsonplaceholder</h1>
       <h3>        
         The current resource is {resourceType}
       </h3>

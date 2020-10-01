@@ -1,4 +1,17 @@
+/**
+ * Nav example from https://reactrouter.com/web/example/basic
+ */
 import React from "react";
+
+// here all my componets
+import App from './App';
+import WindowSize from './WindowSize'   // all this names MUST start with uppercase
+import WordCounter from './WordCounter'
+import UsedToBe from './UsedToBe'
+import IncrementDecrement from './IncrementDecrement'
+import ToDo from './ToDo'
+
+// I had to execute npm install react-router-dom
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,10 +34,10 @@ export default function BasicExample() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">useRef and useReducer</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/Examples2">useEffect, add Listener</Link>
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>
@@ -44,8 +57,8 @@ export default function BasicExample() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/Examples2">
+            <Examples2 />
           </Route>
           <Route path="/dashboard">
             <Dashboard />
@@ -62,15 +75,21 @@ export default function BasicExample() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      <h2>useRef and useReducer</h2>
+      <ToDo/>
+      <IncrementDecrement/>
+      <WordCounter/>
+      <UsedToBe/>
     </div>
   );
 }
 
-function About() {
+function Examples2() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>useEffect, add Listener</h2>
+      <WindowSize />
+      <App />
     </div>
   );
 }
