@@ -7,11 +7,21 @@
  
  
  export default function Slower() {
-   const  [number, setNumber] = useState(0)
-   const [dark, setDark] = useState(false)
-   // this function is called every time the page is render, that is why is so slow to display. 
-  //  this is very expensive, so I should change to useMemo
-   const doubleNumber = slowFunction(number)
+  const  [number, setNumber] = useState(0)
+  const [dark, setDark] = useState(true)
+  // this function is called every time the page is render, that is why is so slow to display. 
+  // Is all slow BS is rerendering all. Even the black div
+  //  this is very expensive, so I should change to useMemo, so I cach the input. When the input num changes, then
+  // the fun will be called again
+  //  const doubleNumber = slowFunction(number)
+  // with this, onky when number changes (the one declared on the depencies) change, slowFunction will be called
+  // the btn now don't have the delay
+  // DONT abuse memo, bc consumes memory and is a call for a function
+  // when dependencies changes is when the rerender is called
+   const doubleNumber = useMemo(() => {
+     return slowFunction(number) 
+    } ,[number] ) // list of dependecies. when this changes, then the function is called. 
+
    const themeStyles = {
      backgroundColor : dark ? 'black' : 'white',
      color : dark ? 'white' : 'black'
@@ -21,8 +31,11 @@
       <div>
         <h1> useMemo example.</h1>
         <br></br><br></br>
+        <span> Enter a number and wait </span>
+        <br></br>
         <input type="number" value={number} onChange={e => {setNumber(parseInt(e.target.value) )} }></input>
-        <button onClick={() => setDark(prevDark => !prevDark) }> Change Theme </button>
+        <br></br>
+        <button onClick={() => setDark(prevDark => !prevDark) }> Change Theme, I dont have delay </button>
         <div style={themeStyles}> {doubleNumber} </div>
       </div>
      </>
