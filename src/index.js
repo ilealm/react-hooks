@@ -1,11 +1,24 @@
+/**
+ * Examples based on Web Dev Simplified
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import WindowSize from './WindowSize'   // all this names MUST start with uppercase
+import WordCounter from './WordCounter'
+import UsedToBe from './UsedToBe'
+import IncrementDecrement from './IncrementDecrement'
+import ToDo from './ToDo'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ToDo/>
+    <IncrementDecrement/>
+    <WordCounter/>
+    <UsedToBe/>
+    <WindowSize />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
