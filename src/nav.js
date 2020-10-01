@@ -10,6 +10,7 @@ import WordCounter from './WordCounter'
 import UsedToBe from './UsedToBe'
 import IncrementDecrement from './IncrementDecrement'
 import ToDo from './ToDo'
+import Slower from './Slower'
 
 // I had to execute npm install react-router-dom
 import {
@@ -40,7 +41,7 @@ export default function BasicExample() {
             <Link to="/Examples2">useEffect, add Listener</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/Examples3">useMemo</Link>
           </li>
         </ul>
 
@@ -60,8 +61,8 @@ export default function BasicExample() {
           <Route path="/Examples2">
             <Examples2 />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/Examples3">
+            <Examples3 />
           </Route>
         </Switch>
       </div>
@@ -94,10 +95,11 @@ function Examples2() {
   );
 }
 
-function Dashboard() {
+function Examples3() {
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>useMemo</h2>
+      <Slower />
     </div>
   );
 }
