@@ -41,7 +41,7 @@ export default function BasicExample() {
             <Link to="/Examples2">useEffect, add Listener</Link>
           </li>
           <li>
-            <Link to="/Examples3">useMemo</Link>
+            <Link to="/Examples3">useMemo, useContext</Link>
           </li>
         </ul>
 

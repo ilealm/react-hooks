@@ -31,7 +31,7 @@
       <div>
         <h1> useMemo example.</h1>
         <br></br><br></br>
-        <span> Enter a number and wait </span>
+        <span> Enter a number and wait to see the delay.... </span>
         <br></br>
         <input type="number" value={number} onChange={e => {setNumber(parseInt(e.target.value) )} }></input>
         <br></br>
