@@ -4,25 +4,20 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import WindowSize from './WindowSize'   // all this names MUST start with uppercase
-import WordCounter from './WordCounter'
-import UsedToBe from './UsedToBe'
-import IncrementDecrement from './IncrementDecrement'
-import ToDo from './ToDo'
+
 import * as serviceWorker from './serviceWorker';
+
+import Nav from './nav'
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToDo/>
-    <IncrementDecrement/>
-    <WordCounter/>
-    <UsedToBe/>
-    <WindowSize />
-    <App />
+    <Nav/>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
