@@ -3,7 +3,7 @@
  * using useReducer
  */
 
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 
 // to avoid hard code
 const ACTIONS = {
