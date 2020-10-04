@@ -1,7 +1,6 @@
 import React from 'react'
 import { useTheme, useThemeUpdate } from './ThemeContext'
 
-
 export default function FunctionContextComponent() {
   const darkTheme = useTheme()  //this is returning a React.createContext()
   const toggleTheme = useThemeUpdate()  //this is returning a React.createContext()

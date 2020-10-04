@@ -12,10 +12,12 @@ export function useThemeUpdate(){
 }
 
 export function ThemeProvider({ children }) {
-  // export default function ThemeProvider({ children }) {
   const [darkTheme, setDarkTheme] = useState(true)
 
   function toggleTheme(){
+    // I NEED TO USE AN ARROW FUN. TO GET THE ORIGNAL STATE. WHATEVER I PUT HERE AS PARAMETER, WILL GET THE VALUE OF THE ORIGINAL STATE, AND
+    // I CAN SAY THIS IS MY PREVIOUS STATE BC IM GOING TO CHANGE IT 
+    // prevDarkTheme will take the CURRENT value of darkTheme (but now, it will become the prev)
     setDarkTheme(prevDarkTheme => !prevDarkTheme)
   }
 
