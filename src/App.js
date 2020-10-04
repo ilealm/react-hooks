@@ -48,8 +48,8 @@ export default function App() {
       <h3>        
         The current resource is {resourceType}
       </h3>
-      { items.map(item => {
-        return <pre>{JSON.stringify(item)}</pre>
+      { items.map((item, i) => {
+        return <pre key={i}>{JSON.stringify(item)}</pre>
       })
 
       }

@@ -5,7 +5,7 @@
  * It is better to use useRef to refernce elements inside the html. Each html element have a ref attribute
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 export default function WordCounter() {
   const [name, setName] = useState('')

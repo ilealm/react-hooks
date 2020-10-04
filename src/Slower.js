@@ -29,7 +29,7 @@
    return (
      <>
       <div>
-        <h1> useMemo example.</h1>
+        {/* <h1> useMemo example.</h1> */}
         <br></br><br></br>
         <span> Enter a number and wait to see the delay.... </span>
         <br></br>

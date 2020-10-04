@@ -11,6 +11,7 @@ import UsedToBe from './UsedToBe'
 import IncrementDecrement from './IncrementDecrement'
 import ToDo from './ToDo'
 import Slower from './Slower'
+import ContextExample from './ContextExample'
 
 // I had to execute npm install react-router-dom
 import {
@@ -41,7 +42,7 @@ export default function BasicExample() {
             <Link to="/Examples2">useEffect, add Listener</Link>
           </li>
           <li>
-            <Link to="/Examples3">useMemo, useContext</Link>
+            <Link to="/Examples3"> useContext, useMemo</Link>
           </li>
         </ul>
 
@@ -98,8 +99,12 @@ function Examples2() {
 function Examples3() {
   return (
     <div>
+      <h2>useContext</h2>
+      <ContextExample />
+      <br></br><br></br>
       <h2>useMemo</h2>
       <Slower />
+
     </div>
   );
 }
